@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>San Valentín ❤️</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:pink;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    text-align:center;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:20px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>¿Quieres salir conmigo en San Valentín? ❤️</h1>
+
+<button id="si" onclick="aceptar()">SI 😍</button>
+<button id="no" onclick="rechazar()">NO 😭</button>
+
+</div>
+
+<script>
+
+let tamañoSi = 20;
+let tamañoNo = 20;
+
+function aceptar(){
+    alert("Sabía que dirías que sí 😈❤️");
+}
+
+function rechazar(){
+
+    tamañoSi += 10;   // el SI crece
+    tamañoNo -= 5;    // el NO se hace pequeño
+
+    document.getElementById("si").style.fontSize = tamañoSi + "px";
+    document.getElementById("no").style.fontSize = tamañoNo + "px";
+
+}
+
+</script>
+
+</body>
+</html>
